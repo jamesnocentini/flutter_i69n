@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_i69n/example_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +16,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      localizationsDelegates: const [
+        ExampleLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: ExampleLocalizations.supportedLocales,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -39,9 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final translations = ExampleLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(translations.homePageTitle),
       ),
       body: Center(
         child: Column(

@@ -1,0 +1,4 @@
+homePageTitle: Flutter localization example
+homePageCenterText(int times): 
+  "You have pushed the button $times ${_plural(times, one:'time', many:'times')}"
+incrementTooltip: Increment

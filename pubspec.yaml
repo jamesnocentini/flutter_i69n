@@ -13,12 +13,16 @@ dependencies:
     sdk: flutter
   
   cupertino_icons: ^1.0.2
+  i69n: ^2.1.0
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   
   flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
 
 flutter:  
   uses-material-design: true
